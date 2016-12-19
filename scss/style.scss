@@ -52,7 +52,7 @@ body{
   
 }
 .cards  {
-    
+  opacity:0;
   font-family: 'Aref Ruqaa', serif;
   font-size:$width/6/2;
   text-align:center;
@@ -63,8 +63,11 @@ body{
   border: $border-standar;
   border-radius:$width/30;
   box-shadow:1px 1px 2px 2px rgba(0,0,0,.2);
-  margin:0 auto;
   margin-top:5%;
+  top:55px;
+  left:40vw;
+  position: absolute;
+  z-index:2;
   @include transform-style(preserve-3d);
   @include transition(all 2s ease-in-out);
   &:hover{
@@ -111,16 +114,22 @@ z-index:3;
 .btn{
   border:$border-standar;
   background:($WHITE);
-  padding: 5px;
+  padding: 8px;
   margin-left: 2%;
   border-radius:11px;
   cursor:pointer;
    @include transition(all 1s ease-in-out);
   outline:none;
-   
+  position: absolute;
+  z-index:1;
+  opacity:0;
   &:hover{
    @include animation(bounce 1.5s infinite);
   }
+
+}
+.btn1{
+left:130px;
 }
 
 @keyframes spin {
@@ -138,4 +147,38 @@ z-index:3;
 	60% {
     @include transform(translateY(-8px));
   }
+}
+svg{
+  position: absolute;
+  top:0;
+ 
+}
+#butt{
+  top:0;
+  margin-left:5px ;
+  left:2vw;
+  width:78px;
+}
+#butt1{
+  margin-left:110px;
+  left:2vw;
+  width:78px;
+}
+@media screen and (min-width: 1080px) {
+  
+  #carta{
+    margin-left:-380px !important;
+  }
+}
+#carta{
+  left:45vw;
+  margin-left:-334px;
+  
+  width: 600px;
+  margin-top:5%;
+  top:42px;
+}
+.relati{
+  position: relative;
+  
 }
